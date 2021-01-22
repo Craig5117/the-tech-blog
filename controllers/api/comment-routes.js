@@ -26,4 +26,8 @@ router.post("/", (req, res) => {
     });
 });
 
+// update a comment
+
+// delete a comment
+
 module.exports = router;
