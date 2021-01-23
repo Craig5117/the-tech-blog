@@ -69,9 +69,11 @@ ul {
   list-style-type: none;
 }
 
+
 /*Post Styles*/
 .post {
   border: solid 2px var(--primary-color);
+  margin-bottom: 2%;
 }
 
 .post:hover .post-header, .post:hover .post-footer {
