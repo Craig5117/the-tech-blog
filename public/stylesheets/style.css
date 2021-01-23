@@ -16,6 +16,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 a {
   text-decoration: none;
 }
@@ -48,8 +53,6 @@ h1 {
   text-align: center;
   box-shadow: 4px 4px 0 var(--tertiary-color);
   margin: 2rem 0;
-  /* border-bottom: solid 4px var(--tertiary-color);
-  border-right: solid 4px var(--tertiary-color); */
 }
 
 h1 a {
@@ -58,3 +61,45 @@ h1 a {
 }
 
 /*Main Styles*/
+main {
+  padding: 1.5rem 2.75rem 2.75rem 2.75rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*Post Styles*/
+.post {
+  border: solid 2px var(--primary-color);
+}
+
+.post:hover .post-header, .post:hover .post-footer {
+  color: var(--secondary-color);
+}
+
+.post-header {
+  background-color: var(--primary-color);
+  margin: -1px;
+  color: var(--tertiary-color);
+  padding: .75em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-footer{
+  background-color: var(--primary-color);
+  margin: -1px;
+  color: var(--tertiary-color);
+  padding: .25em .75em;
+}
+
+.post-body {
+  padding: 1em;
+  color: var(--primary-color);
+}
+
+.post-title {
+  font-size: 1.75em;
+
+}
