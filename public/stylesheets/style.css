@@ -25,6 +25,17 @@ a {
   text-decoration: none;
 }
 
+.secondary-text {
+  color: var(--secondary-color);
+}
+
+/* .flex-column {
+  display: flex;
+  flex-direction: column;
+} */
+
+/* input,textarea{width:100%;display:block} */
+
 /* Header Styles */
 header {
   background-color: var(--primary-color);
@@ -70,17 +81,18 @@ ul {
 }
 
 
-/*Post Styles*/
-.post {
+/*Box Styles*/
+.box {
   border: solid 2px var(--primary-color);
   margin-bottom: 2%;
+  max-width: 100%;
 }
 
-.post:hover .post-header, .post:hover .post-footer {
+.box:hover .highlight {
   color: var(--secondary-color);
 }
 
-.post-header {
+.box-header {
   background-color: var(--primary-color);
   margin: -1px;
   color: var(--tertiary-color);
@@ -89,6 +101,12 @@ ul {
   justify-content: space-between;
 }
 
+.box-title {
+  margin-left: .5em;
+  font-size: 1.75em;
+}
+
+/*Post Styles*/
 .post-footer{
   background-color: var(--primary-color);
   margin: -1px;
@@ -101,7 +119,37 @@ ul {
   color: var(--primary-color);
 }
 
-.post-title {
-  font-size: 1.75em;
+/*Input Styles*/
+.block {
+  display: block;
+}
 
+label {
+  font-size: 1.75em;
+  margin: .5em .8em 0 .8em;
+}
+
+.text-input {
+  border: none;
+  width: 97%;
+  height: 2em;
+  font-size: 1.75em;
+  margin: 0 auto;
+  box-sizing: inherit;
+}
+
+.text-input:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 768px){
+  .text-input {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 540px){
+  .text-input {
+    width: 90%;
+  }
 }
