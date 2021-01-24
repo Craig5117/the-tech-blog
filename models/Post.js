@@ -16,7 +16,7 @@ Post.init(
       allowNull: false,
     },
     post_body: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
         validate: {
             len: [1, 15000]
