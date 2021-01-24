@@ -48,7 +48,8 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
-  width: 24rem;
+  width: 22rem;
+  font-size: 1.2em;
 }
 
 nav a {
@@ -56,12 +57,14 @@ nav a {
 }
 
 h1 {
-  width: 15rem;
+  width: 19rem;
+  font-size: 2.5em;
   background-color: var(--secondary-color);
   border-radius: 0.25rem;
   text-align: center;
   box-shadow: 4px 4px 0 var(--tertiary-color);
-  margin: 2rem 0;
+  margin: 1.5rem 0;
+  padding: .05em 0;
 }
 
 h1 a {
@@ -95,12 +98,10 @@ ul {
   margin: -1px;
   color: var(--tertiary-color);
   padding: .75em;
-  display: flex;
-  justify-content: space-between;
 }
 
 .box-title {
-  margin-left: .5em;
+  /* margin-left: .5em; */
   font-size: 1.75em;
 }
 
@@ -112,8 +113,7 @@ ul {
   padding: .75em;
   border-radius: .25em;
   width: 97%;
-  margin: .8em .8em 0 .8em;
-  
+  margin: .8em .8em 0 .8em; 
 }
 
 /*Post Styles*/
@@ -128,6 +128,13 @@ ul {
   padding: 1em;
   color: var(--primary-color);
 }
+
+.post-info-wrapper {
+  
+  display: flex;
+  justify-content: space-between;
+}
+
 
 /*Input Styles*/
 .block {
@@ -166,7 +173,21 @@ label {
 /*Dashboard Styles*/
 .dashboard-post {
   background-color: #666666;
+  margin-bottom: 2em;
+  border-radius: .5em;
+  color: #e1dfef;
+  padding: .75em;
 }
+
+.post-date {
+  font-size: 1.75em;
+}
+
+.comment-count {
+  font-size: 1.5em;
+  margin-top: .5em;
+}
+
 
 @media screen and (max-width: 768px){
   .text-input {
@@ -183,8 +204,22 @@ label {
     width: 90%;
   }
 
+  .post-info-wrapper {
+    flex-direction: column;
+  }
+
   .btn {
     width: 90%;
     margin: .8em .5em 0 .5em;
+  }
+
+  nav {
+    width: 15rem;
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 2em;
+    width: 8em;
   }
 }
