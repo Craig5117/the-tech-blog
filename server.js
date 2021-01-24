@@ -4,6 +4,7 @@ const routes = require("./controllers");
 const helpers = require("./utils/helpers.js");
 const path = require("path");
 const exphbs = require("express-handlebars");
+// can set defaultLayout in hbs object
 const hbs = exphbs.create({ helpers });
 const session = require("express-session");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
