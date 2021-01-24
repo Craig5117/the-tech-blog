@@ -32,12 +32,7 @@ a {
 .hide{
   display: none;
 }
-/* .flex-column {
-  display: flex;
-  flex-direction: column;
-} */
 
-/* input,textarea{width:100%;display:block} */
 
 /* Header Styles */
 header {
@@ -151,6 +146,7 @@ label {
   font-size: 1.75em;
   margin: 0 auto;
   box-sizing: inherit;
+  padding-left: .8em;
 }
 
 .text-input:focus {
@@ -165,6 +161,11 @@ label {
   width: 15rem;
   height: 2rem;
   padding: 0 1em 1em 0;
+}
+
+/*Dashboard Styles*/
+.dashboard-post {
+  background-color: #666666;
 }
 
 @media screen and (max-width: 768px){
