@@ -139,6 +139,11 @@ ul {
   color: var(--primary-color);
 }
 
+/* .post-body > p {
+  color: red;
+
+} */
+
 .post-info-wrapper {
   
   display: flex;

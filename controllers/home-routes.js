@@ -64,6 +64,8 @@ router.get('/signup', (req, res) => {
   });
 });
 
-
+// router.get('/post/:id', (req, res) => {
+//   res.render('edit-post')
+// })
 
 module.exports = router;
