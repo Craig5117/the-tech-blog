@@ -15,8 +15,8 @@ async function signupFormHandler(event) {
         });
         if (response.ok) {
             console.log('success');
+            document.location.replace('/');
         } else {
-            console.log(response)
             alert(`${response.statusText}
             Make sure your password is 8 characters.
             If your password is the correct length,
