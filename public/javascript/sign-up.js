@@ -15,7 +15,15 @@ async function signupFormHandler(event) {
         });
         if (response.ok) {
             console.log('success');
-            document.location.replace('/');
+            await fetch('/api/users/login', {
+                method: 'post',
+                body: JSON.stringify({
+                    username,
+                    password
+                }),
+                headers: { 'Content-Type': 'application/json' }
+            });
+            await document.location.replace('/');
         } else {
             alert(`${response.statusText}
             Make sure your password is 8 characters.
