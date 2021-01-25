@@ -180,7 +180,7 @@ label {
   border-radius: .1em;
 }
 
-#body-input {
+#body-input, #comment-input {
   height: 4em;
 }
 

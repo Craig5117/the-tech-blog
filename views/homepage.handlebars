@@ -1,7 +1,9 @@
 <ul>
     {{#each posts as |post|}}
     <li>
-        {{> post-info post}}
+        <a href="/post/{{post.id}}">
+            {{> post-info post}}
+        </a>
     </li>
     {{/each}}
 </ul>

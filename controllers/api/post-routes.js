@@ -77,6 +77,8 @@ router.post("/", (req, res) => {
   Post.create({
     post_title: req.body.post_title,
     post_body: req.body.post_body,
+    // This line works for front-end but breaks the call via api route
+    // to re-establish the api call, this would have to be req.body.user_id
     user_id: req.session.user_id,
   })
     .then((dbPostData) => res.json(dbPostData))
