@@ -48,7 +48,9 @@ document.onkeypress = function () {
   resetTimer();
 };
 
+// This won't work by itself. It logs out evertime the page location changes.
+
 // logout before leaving page
-window.onbeforeunload = function () {
-  autoLogout();
-};
+// window.onbeforeunload = function () {
+//   autoLogout();
+// };
