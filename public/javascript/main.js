@@ -8,9 +8,10 @@ function startTimer() {
   warningTimerID = window.setTimeout(warningInactive, warningTimeout);
 }
 
+// counts down to initiate inactivity warning
 function warningInactive() {
   window.clearTimeout(warningTimerID);
-  timeoutTimerID = window.setTimeout(IdleTimeout, timeoutNow);
+  timeoutTimerID = window.setTimeout(autoLogout, timeoutNow);
   let stayLoggedIn = alert(
     "You have been inactive for 30 minutes. If you click ok within 60 seconds, you will stay logged in. Otherwise, you will need to log in again."
   );
@@ -19,6 +20,7 @@ function warningInactive() {
   }
 }
 
+// resets the timers
 function resetTimer() {
   window.clearTimeout(timeoutTimerID);
   window.clearTimeout(warningTimerID);
@@ -26,12 +28,14 @@ function resetTimer() {
 }
 
 // Logout the user.
-function IdleTimeout() {
+function autoLogout() {
   document.getElementById("logout").click();
 }
 
+// initiates timer on login
 startTimer();
 
+// any of the next three actions reset the timer
 document.onmousemove = function () {
   resetTimer();
 };
@@ -42,4 +46,9 @@ document.addEventListener("scroll", function () {
 
 document.onkeypress = function () {
   resetTimer();
+};
+
+// logout before leaving page
+window.onbeforeunload = function () {
+  autoLogout();
 };
