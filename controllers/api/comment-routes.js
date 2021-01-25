@@ -1,6 +1,7 @@
 const sequelize = require("../../config/connection");
 const router = require("express").Router();
 const { Post, User, Comment } = require("../../models");
+const withAuth = require("../../utils/auth");
 // withAuth here
 
 // Get all Comments
@@ -22,7 +23,7 @@ router.get("/", (req, res) => {
 });
 
 // create a comment
-router.post("/", (req, res) => {
+router.post("/", withAuth, (req, res) => {
   Comment.create({
     comment_body: req.body.comment_body,
     // like the post route, the session id here will break the backend api posting
@@ -40,7 +41,7 @@ router.post("/", (req, res) => {
 // update a comment
 // not sure if I will include this in the final product or not
 // but this would allow a user to update or delete their comments
-router.put("/:id", (req, res) => {
+router.put("/:id", withAuth, (req, res) => {
   Comment.update(
     {
       comment_body: req.body.comment_body,
@@ -65,7 +66,7 @@ router.put("/:id", (req, res) => {
 });
 
 // delete a comment
-router.delete("/:id", (req, res) => {
+router.delete("/:id", withAuth, (req, res) => {
   Comment.destroy({
     where: {
       id: req.params.id,

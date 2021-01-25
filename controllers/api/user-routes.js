@@ -2,6 +2,7 @@ const router = require("express").Router();
 const sequelize = require("../../config/connection");
 // add withAuth helper
 const { User, Post, Comment } = require("../../models");
+const withAuth = require("../../utils/auth");
 
 // Get all users
 router.get("/", (req, res) => {
@@ -116,7 +117,7 @@ router.post("/login", (req, res) => {
 });
 
 // logout
-router.post("/logout", (req, res) => {
+router.post("/logout", withAuth, (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
