@@ -33,7 +33,7 @@ The Tech Blog is a CMS style blog for publishing tech related articles and opini
 
 ## Usage
 
-To use, follow the link to the site. Click on login to get started. Choose sign up instead to sign up for an account. Enter a username (must be unique) and a password (must be at least 8 characters) and submit. You will be signed in right away. Visit the dashboard to start making posts.
+To use, follow the link to the site. Click on login to get started. Choose sign up instead to sign up for an account. Enter a username (must be unique) and a password (must be at least 8 characters) and submit. You will be signed in right away. Visit the dashboard to start making posts. The site is set to log you out after thirty minutes of inactivity.
 
 [Back to Contents](#table-of-contents)
   
