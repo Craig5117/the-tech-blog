@@ -1,4 +1,13 @@
 # The Tech Blog
+
+![Screenshot of The Tech Blog homepage](./screenshots/screenshot-1.png)
+
+---
+
+![Screenshot of The Tech Blog edit post](./screenshots/screenshot-3.png)
+
+---
+
 ## Description 
 
 The Tech Blog is a CMS style blog for publishing tech related articles and opinions.
@@ -17,6 +26,7 @@ The Tech Blog is a CMS style blog for publishing tech related articles and opini
 
 ## Website
 
+https://shielded-sea-02519.herokuapp.com/
 
 ---
 
