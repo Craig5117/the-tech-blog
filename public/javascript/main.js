@@ -35,14 +35,12 @@ function autoLogout() {
 // initiates timer on login
 startTimer();
 
-// any of the next three actions reset the timer
+// any of these actions reset the timer
 document.onmousemove = function () {
   resetTimer();
 };
 
-document.addEventListener("scroll", function () {
-  resetTimer();
-});
+
 
 document.onkeypress = function () {
   resetTimer();
