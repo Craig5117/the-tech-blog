@@ -1,5 +1,7 @@
 {{> post-info post}}
+{{#if loggedIn}}
 {{> comment-form}}
+{{/if}}
 <ul>
      {{#each comments as |comment|}}
     <li>
