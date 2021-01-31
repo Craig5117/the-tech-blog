@@ -3,9 +3,9 @@ const express = require("express");
 const routes = require("./controllers");
 const helpers = require("./utils/helpers.js");
 const path = require("path");
-const exphbs = require("express-handlebars");
+// const exphbs = require("express-handlebars");
 // can set defaultLayout in hbs object
-const hbs = exphbs.create({ helpers });
+// const hbs = exphbs.create({ helpers });
 const session = require("express-session");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
@@ -25,10 +25,14 @@ const sess = {
 const app = express();
 
 const PORT = process.env.PORT || 3001;
-app.engine("handlebars", hbs.engine);
+const options = { doctype: "<!DOCTYPE html>" };
+app.engine('jsx', require('express-react-views').createEngine(options));
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jsx');
+// app.engine("handlebars", hbs.engine);
 // alternately like this:
 // app.engine('handlebars', exphbs({ can set defaultLayout and helpers here}));
-app.set("view engine", "handlebars");
+// app.set("view engine", "handlebars");
 
 // use session
 app.use(session(sess));
